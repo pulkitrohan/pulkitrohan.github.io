@@ -28,8 +28,9 @@ function myFunction() {
 //   alert("I am an alert box!");
 //   location.href = "https://www.google.com/";
 //   location.href = "twa-custom-launcher://scan?shareid=testid&sharedt=20190920";
-  if (typeof window.NativeInterface !== "undefined" && window.NativeInterface !== null) {
-     window.NativeInterface.toastMe();
+  console.log("window.JSInterface::", window.JSInterface);
+  if (typeof window.JSInterface !== "undefined" && window.JSInterface !== null) {
+     window.JSInterface.toastMe();
   }
   alert("done!");
 }
