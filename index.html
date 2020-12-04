@@ -25,9 +25,12 @@
 <script>
 function myFunction() {
   document.getElementById("demo").innerHTML = "Hello World";
-  alert("I am an alert box!");
+//   alert("I am an alert box!");
 //   location.href = "https://www.google.com/";
-  location.href = "twa-custom-launcher://scan?shareid=testid&sharedt=20190920";
+//   location.href = "twa-custom-launcher://scan?shareid=testid&sharedt=20190920";
+  if (typeof window.NativeInterface !== "undefined" && window.NativeInterface !== null) {
+     window.NativeInterface.toastMe();
+  }
   alert("done!");
 }
 </script>
